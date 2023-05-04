@@ -70,11 +70,12 @@ function setup(){
 
   bordes = createEdgeSprites();
   
-  suelo =createSprite(0,height - 50, 600,20)
+  //---cambia posicion del suelo
+  suelo =createSprite(width/2 ,height - 50, 600,20)
   suelo.addAnimation("suelo_del_juego", suelo_del_juego)
 
   //-------MODIFICAMOS LA POSICION DE REX DE ACUERDO A LA PANTALLA
-    suelo_invisible = createSprite(width / 2, height - 20, width, 20)
+  suelo_invisible = createSprite(width / 2, height - 20, width, 20)
   suelo_invisible.visible = false
  
   puntos = 0
@@ -82,15 +83,17 @@ function setup(){
   grupo_nubes = new Group()
   grupo_cactus = new Group()
 
-  img_game_over = createSprite(290, 60, 300, 50)
+  //---cambias la posicion de la img de game over
+  img_game_over = createSprite(width/2 , height/2 , 200, 50)
   img_game_over.addAnimation("fin_juego", fin_juego)
   img_game_over.visible = false
 
-  
-  img_reinicio = createSprite(290, 120, 300, 50)
+  //---cambias la posicion de sprite de reinicio
+  img_reinicio = createSprite(width/2 , 50 + heigth/2 , 300, 50)
   img_reinicio.scale =0.05
   img_reinicio.addAnimation("reinicio", reinicio)
   img_reinicio.visible = false
+
 }
 
 
